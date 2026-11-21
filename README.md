@@ -1,33 +1,39 @@
 # FLOWBIZ AI
 
-FLOWBIZ AI is an early-stage SaaS concept for academies and training businesses to manage enquiries, leads, courses, students, enrolments, follow-ups and payments.
+FLOWBIZ AI is an early-stage SaaS product for academies and training businesses. The first product direction brings enquiries, lead management, courses, students, enrolments and payment visibility into one workspace.
 
-## Project status
+## Current implementation
 
-This repository is being initialized. The first UI prototype is available in the starter archive supplied separately. This repository currently contains the project setup notes only; application source files have not yet been committed.
+- Responsive marketing website with product positioning, workflow, solutions and indicative pricing.
+- Interactive dashboard prototype with lead search, lead creation and status updates.
+- Next.js 15, React 19 and TypeScript.
+- Supabase client scaffold for a future backend connection.
+- GitHub Actions workflow configured to install dependencies, lint and build on pushes and pull requests.
 
-## Planned stack
+## Run locally
 
-- Next.js 15 / React 19
-- TypeScript
-- Supabase for authentication and PostgreSQL data
-- Responsive marketing website and SaaS dashboard
+Requirements: Node.js 20.9+ and npm.
 
-## Development requirements
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+```
 
-- Node.js 20.9+
-- npm
+Open http://localhost:3000.
 
-## Planned milestones
+## Current limitations
 
-1. Commit the website and dashboard source.
-2. Install dependencies and run lint/build checks.
-3. Configure Supabase authentication, schema, row-level security and storage.
-4. Replace demo data with persistent records.
-5. Implement real lead, course, student, enrolment and payment workflows.
-6. Add integrations and AI-assisted follow-ups.
-7. Deploy a staging environment and verify it before production.
+This is a prototype, not a production SaaS. Dashboard records are illustrative and browser-session state only. The early-access form does not send or store email addresses. Authentication, persistent database storage, team permissions, real payment processing, AI responses, WhatsApp/email integrations and production deployment are not yet implemented.
 
-## Important
+Do not enter real customer or student information.
 
-The current prototype uses illustrative local demo data. Do not enter real customer information. No production database, authentication, payment processing, AI automation or deployment is configured yet.
+## Roadmap
+
+1. Verify automated lint and production build.
+2. Configure Supabase project, authentication, schema and row-level security.
+3. Replace demo data with tenant-isolated persistent records.
+4. Implement courses, cohorts, students, enrolments and payment workflows.
+5. Add secure email/WhatsApp messaging and approved knowledge-grounded AI.
+6. Add billing, audit logs, backups, monitoring and privacy controls.
+7. Pilot with a small number of academies before general release.
